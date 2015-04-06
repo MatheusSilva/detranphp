@@ -1,0 +1,16 @@
+rodar os comandos abaixo na pasta aplicação para criar o banco de dados
+
+php artisan migrate:make create_tipos_table --table=tipos --create=tipos
+
+
+php artisan migrate:make create_generos_table --table=generos --create=generos
+
+
+php artisan migrate:make create_filmes_table --table=filmes --create=filmes
+
+
+php artisan migrate:make create_filmes_generos_table --table=filmes_generos --create=filmes_generos
+
+
+php artisan migrate:make add_comentario_to_filmes_table --table=filmes
+
