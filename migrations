@@ -1,16 +1,15 @@
-rodar os comandos abaixo na pasta aplicação para criar o banco de dados
+primeiro crie a base de dados.
 
-php artisan migrate:make create_tipos_table --table=tipos --create=tipos
+create database if not exists aplicacao;
 
+depois rode os comandos abaixo na pasta aplicação para criar o banco de dados.
 
-php artisan migrate:make create_generos_table --table=generos --create=generos
+php artisan migrate:install
 
+php artisan migrate:make create_multa_table --table=multa --create=multa
 
-php artisan migrate:make create_filmes_table --table=filmes --create=filmes
+php artisan migrate
 
+php artisan db:seed
 
-php artisan migrate:make create_filmes_generos_table --table=filmes_generos --create=filmes_generos
-
-
-php artisan migrate:make add_comentario_to_filmes_table --table=filmes
-
+se tudo ocorreu bem as tabelas foram criadas e populadas.
